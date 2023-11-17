@@ -1,0 +1,140 @@
+:root {
+  --color-red: hsl(0, 75%, 50%);
+  --color-light-red: hsl(0, 75%, 70%);
+  --color-dark-red: hsl(0, 75%, 40%);
+  --color-green: hsl(143, 75%, 50%);
+  --color-light-green: hsl(143, 75%, 70%);
+  --color-dark-green: hsl(143, 75%, 40%);
+  --color-orange: hsl(45, 75%, 50%);
+  --color-light-orange: hsl(45, 75%, 70%);
+  --color-dark-orange: hsl(45, 75%, 40%);
+  --color-gray: hsl(0, 0%, 50%);
+  --color-light-gray: hsl(0, 0%, 70%);
+  --color-gray: hsl(0, 0%, 40%);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+#container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#title {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+#clock {
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+#status {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+#buttonGroup {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#startFocus {
+  background-color: var(--color-red);
+  color: white;
+  padding: 8px 16px;
+  border: 2px solid var(--color-dark-red);
+  border-radius: 8px;
+}
+
+#startFocus:hover {
+  background-color: var(--color-light-red);
+}
+
+#startBreak {
+  background-color: var(--color-green);
+  color: white;
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: 2px solid var(--color-dark-green);
+  border-radius: 8px;
+}
+
+#startBreak:hover {
+  background-color: var(--color-light-green);
+}
+
+#startUntracked {
+  background-color: var(--color-orange);
+  color: white;
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: 2px solid var(--color-dark-orange);
+  border-radius: 8px
+}
+
+#startUntracked:hover {
+  background-color: var(--color-light-orange);
+}
+
+#timeGroup {
+  text-align: left;
+  margin-top: 20px;
+}
+
+#timeGroup label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#divisorGroup {
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#divisorLabel {
+  margin-right: 10px;
+}
+
+#divisorInput {
+  width: 50px;
+  border-radius: 8px;
+  border: 2px solid;
+  border-color: var(--color-light-gray);
+  height: 28px;
+}
+
+#applyButton {
+  background-color: var(--color-gray);
+  color: white;
+  padding: 8px 16px;
+  border: 2px solid var(--color-dark-gray);
+  border-radius: 8px
+}
+
+#applyButton:hover {
+  background-color: var(--color-light-gray);
+}
+
+#stats {
+  text-align: left;
+  margin-top: 20px;
+}
+
+#reset {
+  background-color: var(--color-gray);
+  color: white;
+  padding: 8px 16px;
+  border: 2px solid var(--color-dark-gray);
+  border-radius: 8px
+}
+
+#reset:hover {
+  background-color: var(--color-light-gray);
+}
