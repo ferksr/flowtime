@@ -24,24 +24,25 @@
                 Available Break: <span id="availableBreak">00:00:00</span>
             </label>
         </div>
+        <p>Options & Stats</p>
+        <div id="options">
+          <div id="divisorGroup">
+              <label id="divisorLabel">
+                  Divisor: <input type="number" id="divisorInput" value="5"/>
+              </label>
+              <button id="applyButton" onclick="applyDivisor()">Apply</button>
+          </div>
 
-        <div id="divisorGroup">
-            <label id="divisorLabel">
-                Divisor: <input type="number" id="divisorInput" value="5"/>
-            </label>
-            <button id="applyButton" onclick="applyDivisor()">Apply</button>
-        </div>
-
-        <div id="stats">
-            <p>Total focus: <span id="totalFocus">00:00:00</span></p>
-            <p>Focus sessions: <span id="focusSessions">0</span></p>
-            <p>Total break: <span id="totalBreak">00:00:00</span></p>
-            <p>Break sessions: <span id="breakSessions">0</span></p>
-            <p>Total untracked: <span id="totalUntracked">00:00:00</span></p>
-            <p>Untracked sessions: <span id="untrackedSessions">0</span></p>
-        </div>
-
-        <button id="reset" onclick="reset()">Reset</button>
+          <div id="stats">
+              <p>Total focus: <span id="totalFocus">00:00:00</span></p>
+              <p>Focus sessions: <span id="focusSessions">0</span></p>
+              <p>Total break: <span id="totalBreak">00:00:00</span></p>
+              <p>Break sessions: <span id="breakSessions">0</span></p>
+              <p>Total untracked: <span id="totalUntracked">00:00:00</span></p>
+              <p>Untracked sessions: <span id="untrackedSessions">0</span></p>
+          </div>
+          <button id="reset" onclick="reset()">Reset</button>
+      </div>
     </div>
 </body>
 </html>
