@@ -1,12 +1,13 @@
 let focusTime = 0;
 let currentFocusTime = 0;
 let breakTime = 0;
+let totalBreakTime = 0;
 let untrackedTime = 0;
 let focusSessions = 0;
 let breakSessions = 0;
 let untrackedSessions = 0;
 let divisor = 5;
-let status = "Untracked";
+let mode = "Untracked";
 let timer;
 
 window.onload = function() {
@@ -16,7 +17,7 @@ window.onload = function() {
 
 function startFocus() {
     clearInterval(timer);
-    status = "Focus";
+    mode = "Focus";
     currentFocusTime = 0;
     timer = setInterval(function() {
         focusTime++;
@@ -32,9 +33,10 @@ function startFocus() {
 function startBreak() {
     if (breakTime > 0) {
         clearInterval(timer);
-        status = "Break";
+        mode = "Break";
         timer = setInterval(function() {
             breakTime--;
+            totalBreakTime++;
             if (breakTime === 0) {
                 startUntracked();
             }
@@ -46,7 +48,7 @@ function startBreak() {
 
 function startUntracked() {
     clearInterval(timer);
-    status = "Untracked";
+    mode = "Untracked";
     timer = setInterval(function() {
         untrackedTime++;
         updateDisplay();
@@ -64,21 +66,22 @@ function reset() {
     focusTime = 0;
     currentFocusTime = 0;
     breakTime = 0;
+    totalBreakTime = 0;
     untrackedTime = 0;
     focusSessions = 0;
     breakSessions = 0;
     untrackedSessions = 0;
-    status = "Untracked";
+    mode = "Untracked";
     updateDisplay();
 }
 
 function updateDisplay() {
-    document.getElementById("clock").innerText = formatTime(status === "Focus" ? currentFocusTime : status === "Break" ? breakTime : untrackedTime);
-    document.getElementById("statusText").innerText = status;
+    document.getElementById("clock").innerText = formatTime(mode === "Focus" ? currentFocusTime : mode === "Break" ? breakTime : untrackedTime);
+    document.getElementById("statusText").innerText = mode;
     document.getElementById("availableBreak").innerText = formatTime(breakTime);
     document.getElementById("totalFocus").innerText = formatTime(focusTime);
     document.getElementById("focusSessions").innerText = focusSessions;
-    document.getElementById("totalBreak").innerText = formatTime(breakTime);
+    document.getElementById("totalBreak").innerText = formatTime(totalBreakTime);
     document.getElementById("breakSessions").innerText = breakSessions;
     document.getElementById("totalUntracked").innerText = formatTime(untrackedTime);
     document.getElementById("untrackedSessions").innerText = untrackedSessions;
@@ -97,12 +100,13 @@ function saveState() {
         focusTime: focusTime,
         currentFocusTime: currentFocusTime,
         breakTime: breakTime,
+        totalBreakTime: totalBreakTime,
         untrackedTime: untrackedTime,
         focusSessions: focusSessions,
         breakSessions: breakSessions,
         untrackedSessions: untrackedSessions,
         divisor: divisor,
-        status: status
+        mode: mode
     }));
 }
 
@@ -112,11 +116,12 @@ function loadState() {
         focusTime = savedState.focusTime;
         currentFocusTime = savedState.currentFocusTime;
         breakTime = savedState.breakTime;
+        totalBreakTime = savedState.totalBreakTime;
         untrackedTime = savedState.untrackedTime;
         focusSessions = savedState.focusSessions;
         breakSessions = savedState.breakSessions;
         untrackedSessions = savedState.untrackedSessions;
         divisor = savedState.divisor;
-        status = savedState.status;
+        mode = savedState.mode;
     }
 }
