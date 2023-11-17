@@ -16,6 +16,16 @@ window.onload = function() {
     updateDisplay();
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    if (!Notification) {
+      alert('Desktop notifications not available in your browser. Try Chromium.'); 
+      return;
+    }
+  
+    if (Notification.permission !== 'granted')
+      Notification.requestPermission();
+  });
+
 function startFocus() {
     clearInterval(timer);
     mode = "Focus";
@@ -26,7 +36,7 @@ function startFocus() {
         if (currentFocusTime % divisor === 0) {
             breakTime++;
         }
-        titleEmoji = titleEmoji === "🔴" ? "🟧" : "🔴";
+        titleEmoji = titleEmoji === "🔴" ? "🔴" : "🔴";
         updateDisplay();
     }, 1000);
     focusSessions++;
@@ -41,6 +51,11 @@ function startBreak() {
             totalBreakTime++;
             if (breakTime === 0) {
                 startUntracked();
+                if (Notification.permission === "granted") {
+                    new Notification('Break ended', {
+                        body: 'Your break has ended. Time to get back to work!',
+                    });
+                }
             }
             updateDisplay();
         }, 1000);
