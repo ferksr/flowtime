@@ -10,7 +10,7 @@
   --color-dark-yellow: hsl(45, 75%, 40%);
   --color-gray: hsl(0, 0%, 50%);
   --color-light-gray: hsl(0, 0%, 70%);
-  --color-gray: hsl(0, 0%, 40%);
+  --color-dark-gray: hsl(0, 0%, 30%);
 }
 
 body {
@@ -18,6 +18,7 @@ body {
   font-size: 16px;
   text-align: center;
   margin: 0;
+  color: var(--color-dark-gray);
 }
 
 #container {
@@ -89,7 +90,7 @@ body {
 #timeGroup {
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #timeGroup label {
@@ -132,9 +133,12 @@ body {
   background-color: var(--color-light-gray);
 }
 
+#optionsTitle {
+  margin: 0px;
+}
+
 #stats {
   text-align: left;
-  margin-top: 20px;
 }
 
 #reset {
