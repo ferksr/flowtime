@@ -5,9 +5,9 @@
   --color-green: hsl(143, 75%, 50%);
   --color-light-green: hsl(143, 75%, 70%);
   --color-dark-green: hsl(143, 75%, 40%);
-  --color-orange: hsl(45, 75%, 50%);
-  --color-light-orange: hsl(45, 75%, 70%);
-  --color-dark-orange: hsl(45, 75%, 40%);
+  --color-yellow: hsl(45, 75%, 50%);
+  --color-light-yellow: hsl(45, 75%, 70%);
+  --color-dark-yellow: hsl(45, 75%, 40%);
   --color-gray: hsl(0, 0%, 50%);
   --color-light-gray: hsl(0, 0%, 70%);
   --color-gray: hsl(0, 0%, 40%);
@@ -73,16 +73,16 @@ body {
 }
 
 #startUntracked {
-  background-color: var(--color-orange);
+  background-color: var(--color-yellow);
   color: white;
   margin-left: 10px;
   padding: 8px 16px;
-  border: 2px solid var(--color-dark-orange);
+  border: 2px solid var(--color-dark-yellow);
   border-radius: 8px
 }
 
 #startUntracked:hover {
-  background-color: var(--color-light-orange);
+  background-color: var(--color-light-yellow);
 }
 
 #timeGroup {

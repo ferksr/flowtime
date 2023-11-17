@@ -9,7 +9,7 @@ let untrackedSessions = 0;
 let divisor = 5;
 let mode = "Untracked";
 let timer;
-let titleEmoji = "🔴";
+let titleEmoji = "🟡";
 
 window.onload = function() {
     loadState();
@@ -26,7 +26,7 @@ function startFocus() {
         if (currentFocusTime % divisor === 0) {
             breakTime++;
         }
-        titleEmoji = titleEmoji === "🔴" ? "🟥" : "🔴";
+        titleEmoji = titleEmoji === "🔴" ? "🟧" : "🔴";
         updateDisplay();
     }, 1000);
     focusSessions++;
@@ -88,7 +88,7 @@ function updateDisplay() {
     document.getElementById("breakSessions").innerText = breakSessions;
     document.getElementById("totalUntracked").innerText = formatTime(untrackedTime);
     document.getElementById("untrackedSessions").innerText = untrackedSessions;
-    document.title = mode === "Focus" ? `${titleEmoji} - F - ${clockTime}` : mode === "Break" ? `🟢 - B - ${clockTime}` : `🟠 - U`;
+    document.title = mode === "Focus" ? `${titleEmoji} F ${clockTime}` : mode === "Break" ? `🟢 B ${clockTime}` : `🟡 U`;
     saveState();
 }
 
