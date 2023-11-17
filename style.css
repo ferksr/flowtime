@@ -49,7 +49,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 10px;
+  margin: 10px;
   gap: 10px;
 }
 
