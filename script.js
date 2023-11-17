@@ -80,7 +80,15 @@ function reset() {
 function updateDisplay() {
     let clockTime = formatTime(mode === "Focus" ? currentFocusTime : mode === "Break" ? breakTime : untrackedTime);
     document.getElementById("clock").innerText = clockTime;
-    document.getElementById("statusText").innerText = mode;
+    let statusText = document.getElementById("statusText");
+    statusText.innerText = mode;
+    if (mode === "Focus") {
+        statusText.style.color = "var(--color-dark-red)";
+    } else if (mode === "Break") {
+        statusText.style.color = "var(--color-dark-green)";
+    } else {
+        statusText.style.color = "var(--color-dark-yellow)";
+    }
     document.getElementById("availableBreak").innerText = formatTime(breakTime);
     document.getElementById("totalFocus").innerText = formatTime(focusTime);
     document.getElementById("focusSessions").innerText = focusSessions;
