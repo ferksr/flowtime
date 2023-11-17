@@ -6,10 +6,14 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Flowtime</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <div id="container">
-        <div id="title">Flowtime</div>
+        <div id="title">FLOWTIME</div>
         <div id="clock">00:00:00</div>
         <div id="status">Status: <span id="statusText">Untracked</span></div>
         
@@ -21,31 +25,28 @@
 
         <div id="timeGroup">
             <label>
-                Current Focus Time: <span id="currentFocusTime">00:00:00</span>
-            </label>
-
-            <label>
                 Available Break: <span id="availableBreak">00:00:00</span>
             </label>
         </div>
+        <p id="optionsTitle">Options & Stats</p>
+        <div id="options">
+          <div id="divisorGroup">
+              <label id="divisorLabel">
+                  Divisor: <input type="number" id="divisorInput" value="5"/>
+              </label>
+              <button id="applyButton" onclick="applyDivisor()">Apply</button>
+          </div>
 
-        <div id="divisorGroup">
-            <label id="divisorLabel">
-                Divisor: <input type="number" id="divisorInput" />
-            </label>
-            <button id="applyButton" onclick="applyDivisor()">Apply</button>
-        </div>
-
-        <div id="stats">
-            <p>Total focus: <span id="totalFocus">00:00:00</span></p>
-            <p>Focus sessions: <span id="focusSessions">0</span></p>
-            <p>Total break: <span id="totalBreak">00:00:00</span></p>
-            <p>Break sessions: <span id="breakSessions">0</span></p>
-            <p>Total untracked: <span id="totalUntracked">00:00:00</span></p>
-            <p>Untracked sessions: <span id="untrackedSessions">0</span></p>
-        </div>
-
-        <button id="reset" onclick="reset()">Reset</button>
+          <div id="stats">
+              <p>Total focus: <span id="totalFocus">00:00:00</span></p>
+              <p>Focus sessions: <span id="focusSessions">0</span></p>
+              <p>Total break: <span id="totalBreak">00:00:00</span></p>
+              <p>Break sessions: <span id="breakSessions">0</span></p>
+              <p>Total untracked: <span id="totalUntracked">00:00:00</span></p>
+              <p>Untracked sessions: <span id="untrackedSessions">0</span></p>
+          </div>
+          <button id="reset" onclick="reset()">Reset</button>
+      </div>
     </div>
 </body>
 </html>
