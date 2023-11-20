@@ -6,7 +6,7 @@ let untrackedTime = 0;
 let focusSessions = 0;
 let breakSessions = 0;
 let untrackedSessions = 0;
-let divisor = 5;
+let divisor = 3;
 let mode = "Untracked";
 let timer;
 let titleEmoji = "🟡";
