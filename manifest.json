@@ -1,38 +1,15 @@
 {
+  "name": "FLOWTIME",
   "short_name": "Flowtime",
-  "name": "Flow time technique app",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A web app for tracking time",
   "icons": [
     {
-      "src": "android-chrome-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "android-chrome-512x512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "https://ferksr.github.io/flowtime/",
-  "background_color": "#FFFFFF",
-  "display": "standalone",
-  "scope": "https://ferksr.github.io/flowtime/",
-  "theme_color": "#1AB354",
-  "shortcuts": [
-    {
-      "name": "Flowtime",
-      "short_name": "Flowtime",
-      "description": "Flow time technique app",
-      "url": "https://ferksr.github.io/flowtime/",
-      "icons": [{ "src": "android-chrome-192x192.png", "sizes": "192x192" }]
-    }
-  ],
-  "description": "Flow time technique app",
-  "screenshots": [
-    {
-      "src": "https://ferksr.github.io/flowtime/screenshot.png",
-      "type": "image/png",
-      "sizes": "1080x1462"
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
     }
   ]
-}
+ }
