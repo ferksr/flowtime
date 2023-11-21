@@ -13,24 +13,24 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": "https://ferksr.github.io/flowtime/",
   "background_color": "#FFFFFF",
   "display": "standalone",
-  "scope": "/",
+  "scope": "https://ferksr.github.io/flowtime/",
   "theme_color": "#1AB354",
   "shortcuts": [
     {
       "name": "Flowtime",
       "short_name": "Flowtime",
       "description": "Flow time technique app",
-      "url": "/",
+      "url": "https://ferksr.github.io/flowtime/",
       "icons": [{ "src": "android-chrome-192x192.png", "sizes": "192x192" }]
     }
   ],
   "description": "Flow time technique app",
   "screenshots": [
     {
-      "src": "screenshot.png",
+      "src": "https://ferksr.github.io/flowtime/screenshot.png",
       "type": "image/png",
       "sizes": "1080x1462"
     }
