@@ -1,0 +1,38 @@
+{
+  "short_name": "Flowtime",
+  "name": "Flow time technique app",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#1AB354",
+  "shortcuts": [
+    {
+      "name": "Flowtime",
+      "short_name": "Flowtime",
+      "description": "Flow time technique app",
+      "url": "/",
+      "icons": [{ "src": "android-chrome-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "description": "Flow time technique app",
+  "screenshots": [
+    {
+      "src": "/screenshot.png",
+      "type": "image/png",
+      "sizes": "1080x1462"
+    }
+  ]
+}
