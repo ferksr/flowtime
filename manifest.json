@@ -1,0 +1,17 @@
+{
+  "name": "Flowtime",
+  "short_name": "Flowtime",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1AB354",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "density": 4.0
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}
