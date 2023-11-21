@@ -7,7 +7,7 @@
   "description": "A web app for tracking time",
   "icons": [
     {
-      "src": "/icon.png",
+      "src": "/flowtime/icon.png",
       "sizes": "192x192",
       "type": "image/png"
     }
